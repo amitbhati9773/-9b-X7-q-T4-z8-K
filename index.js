@@ -239,6 +239,11 @@ const sheetDbUrl = "https://sheetdb.io/api/v1/akna1l1i6zmhv";
 
 bot.use(session());
 
+//capitalie function
+function capitalizeName(name) {
+  return name.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
+}
+
 // Helper function to check the result page
 const checkResult = async (rollNo, course, semester) => {
     // const resultUrl = `http://www.result4me.com/Result/ResultCCSV?r=${rollNo}`;
@@ -285,7 +290,11 @@ const stepHandler = async (ctx) => {
             ctx.session.step = 1;
             break;
         case 1:
-            ctx.session.name = ctx.message.text;
+           // ctx.session.name = ctx.message.text;
+           ctx.session.name = capitalizeName(ctx.message.text);
+
+
+            
             replyText = '-\n Please Enter Your Roll No.\n-';
             ctx.session.step = 2;
             break;
