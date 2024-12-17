@@ -231,6 +231,8 @@ import keep_alive from './keep_alive.js';
 import { time } from 'console';
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
+const resultUrltext = `https://bothtextpresent.netlify.app/`;
+
 // Replace with your bot's token
 const bot = new Telegraf('7935847593:AAE-bvld-3JdJwQO6oDNPF10_C_fzqM6Ago');
 
