@@ -52,19 +52,16 @@
 
 //     switch (step) {
 //         case 0:
-               await sleep(500);
 //             replyText = '-\n Please Enter Your Name.\n-';
 //             ctx.session.step = 1;
 //             break;
 //         case 1:
 //             ctx.session.name = ctx.message.text;
-               await sleep(500);
 //             replyText = '-\n Please Enter Your Roll No.\n-';
 //             ctx.session.step = 2;
 //             break;
 //         case 2:
 //             ctx.session.rollNo = ctx.message.text;
-               await sleep(500);
 //             replyText = `Please enter your course - (e.g., BCA, BBA, BCOM).`;
 //             ctx.session.step = 3;
 //             break;
@@ -90,7 +87,6 @@
 //             }
 //             break;
 //         case 4:
-               await sleep(600);
 //             replyText = '-\n Please Enter Your Phone Number.\n-';
 //             ctx.session.step = 5;
 //             break;
@@ -284,6 +280,7 @@ const stepHandler = async (ctx) => {
 
     switch (step) {
         case 0:
+            await sleep(500);
             replyText = '-\n Please Enter Your Name.\n-';
             ctx.session.step = 1;
             break;
