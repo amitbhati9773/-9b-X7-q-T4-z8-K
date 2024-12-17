@@ -357,7 +357,8 @@ const stepHandler = async (ctx) => {
 
                 if (resultLink) {
                     // Result found, notify the user
-                    replyText = `${ctx.session.name}, Your Result is already out! 🎉 \n You can check it here: ${resultLink}`;
+                    //replyText = `${ctx.session.name}, Your Result is already out! 🎉 \n You can check it here: ${resultLink}`;
+                    replyText = `-------- \n \n Congratulations,  ${ctx.session.name}   🎉, \n \n Your Result is already out! You can check it here:\n ${resultUrltext} \n \n--------`;
                 } else {
                     // Result not found, save data to Google Sheets
                     const response = await fetch(sheetDbUrl, {
@@ -393,14 +394,14 @@ const stepHandler = async (ctx) => {
 // Bot start handler
 bot.start((ctx) => {
     const message = `*🤖 About This Bot:*
-    Welcome to *Result Notifier Bot*! 🎉  
-    Get your result notification *first* with this bot, ensuring you're always ahead and never miss an important update.
+Welcome to *Result Notifier Bot*! 🎉  
+Get your result notification *first* with this bot, ensuring you're always ahead and never miss an important update.
 
-    *👨‍💻 Developer:*
-    This bot is developed by *Amit Bhati*, a dedicated software developer.
+*👨‍💻 Developer:*
+This bot is developed by *Amit Bhati*, a dedicated software developer.
 
-    *📩 Contact:*
-    Have questions or feedback? Connect with me on Instagram:\n [Click Here To connect me on Instagram](https://www.instagram.com/amitbhati_258)`;
+*📩 Contact:*
+Have questions or feedback? Connect with me on Instagram:\n [Click Here To connect me on Instagram](https://www.instagram.com/amitbhati_258)`;
 
     ctx.replyWithMarkdown(message);
 
