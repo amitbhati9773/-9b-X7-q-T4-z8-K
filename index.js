@@ -360,7 +360,7 @@ const stepHandler = async (ctx) => {
                     });
 
                     if (response.ok) {
-                        replyText = `-------- \n \n ${ctx.session.name} ☹️, \n Your result is not out yet. We will inform you as soon as it's available.\n \n --------`;
+                        replyText = `-------- \n \n Hello , ${ctx.session.name}  \n Your result is not out yet. We will inform you as soon as it's available. 🙂 \n \n --------`;
                     } else {
                         replyText = 'There was an error saving your data. Please try again later.';
                     }
