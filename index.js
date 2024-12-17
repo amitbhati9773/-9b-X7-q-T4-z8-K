@@ -250,7 +250,7 @@ const checkResult = async (rollNo, course, semester) => {
 
         // Construct the exact search string
         const searchText = `COURSE - ${course} - ${semester}`;
-        console.log(` search result is ${searchText}`);
+        //console.log(` search result is ${searchText}`);
 
         // Normalize HTML content
         const normalizedHtml = html.replace(/\s+/g, ' ').toUpperCase();
@@ -423,7 +423,7 @@ bot.on('callback_query', async (ctx) => {
   
     // // Send a confirmation message to the user
     ctx.reply(`You selected ${ctx.session.course} ${semesterText}`);
-    console.log(semesterText)
+    //console.log(semesterText)
 
     // Proceed to the next step
     ctx.session.step = 4;
