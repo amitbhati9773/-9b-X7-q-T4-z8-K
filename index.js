@@ -2,7 +2,8 @@ import { Telegraf } from 'telegraf';
 import fetch from 'node-fetch';
 import { session } from 'telegraf';
 
-const keep_alive = require('./keep_alive.js')
+import keep_alive from './keep_alive.js';
+
 
 // Replace with your bot's token
 const bot = new Telegraf('7935847593:AAE-bvld-3JdJwQO6oDNPF10_C_fzqM6Ago');
