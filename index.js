@@ -231,7 +231,6 @@ import keep_alive from './keep_alive.js';
 import { time } from 'console';
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-const resultUrltext = `https://bothtextpresent.netlify.app/`;
 
 // Replace with your bot's token
 const bot = new Telegraf('7935847593:AAE-bvld-3JdJwQO6oDNPF10_C_fzqM6Ago');
@@ -360,7 +359,7 @@ const stepHandler = async (ctx) => {
                 if (resultLink) {
                     // Result found, notify the user
                     //replyText = `${ctx.session.name}, Your Result is already out! 🎉 \n You can check it here: ${resultLink}`;
-                    replyText = `-------- \n \n Congratulations,  ${ctx.session.name}   🎉, \n \n Your Result is already out! You can check it here:\n ${resultUrltext} \n \n--------`;
+                     replyText = `-------- \n \n Congratulations,  ${ctx.session.name}   🎉, \n \n Your Result is already out! You can check it here:\n ${resultLink} \n \n--------`;
                 } else {
                     // Result not found, save data to Google Sheets
                     const response = await fetch(sheetDbUrl, {
